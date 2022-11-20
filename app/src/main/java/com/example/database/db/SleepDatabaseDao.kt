@@ -14,7 +14,7 @@ import androidx.room.Update
     @Update
     fun update(night: SleepNight)
 
-    @Query("SELECT * from daily_sleep WHERE nightId = :key")
+    @Query("SELECT * from daily_sleep WHERE userId = :key")
     fun get(key: Long): SleepNight?
 
 

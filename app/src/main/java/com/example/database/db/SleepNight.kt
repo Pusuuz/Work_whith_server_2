@@ -1,5 +1,6 @@
 package com.example.database.db
 
+import android.security.identity.AccessControlProfileId
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -8,12 +9,12 @@ import androidx.room.PrimaryKey
 data class SleepNight(
 
     @PrimaryKey(autoGenerate = true)
-    var nightId: Long = 0L,
+    var userId: Long,
 
-    @ColumnInfo(name = "start_time_milli")
-    val startTimeMilli: Long = System.currentTimeMillis(),
+    @ColumnInfo(name = "name")
+    val userName: String ,
 
-    var endTimeMilli: Long = startTimeMilli,
+    var age: Int,
 
-    var sleepQuality: Int = -1
+    var job: String
 )
