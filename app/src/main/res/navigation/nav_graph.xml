@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.example.database.fragments.FirstFragment"
+        android:name="com.example.database.view.FirstFragment"
         android:label="FirstFragment" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
@@ -16,6 +16,6 @@
 
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.database.fragments.SecondFragment"
+        android:name="com.example.database.view.SecondFragment"
         android:label="SecondFragment" />
 </navigation>
