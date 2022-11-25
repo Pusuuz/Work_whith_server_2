@@ -14,7 +14,7 @@ data class SleepNight(
     @ColumnInfo(name = "name")
     val userName: String ,
 
-    var age: Int,
+    var age: String,
 
     var job: String
 )
