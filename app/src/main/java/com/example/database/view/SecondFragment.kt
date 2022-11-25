@@ -33,12 +33,6 @@ class SecondFragment:Fragment(R.layout.second_fragment) {
         super.onDestroyView()
         _binding = null
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.Next.setOnClickListener {
 
-            val job = binding.JobField.text.toString()
-            val age = binding.AgeField.text.toString()
-            val name =   binding.NameField.text.toString()
 
         }
