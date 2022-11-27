@@ -8,11 +8,11 @@ class UserRepository(context: Context) {
 
     private val db = DBobject.getInstance(context).sleepDatabaseDao
 
-    fun insertToDB(data: SleepNight){
-        db.update(data)
+    suspend fun insertToDB(data: SleepNight){
+        db.insert(data)
     }
 
-    fun  getUser():SleepNight? {
+    suspend fun  getUser():SleepNight? {
     return db.get()
     }
 }

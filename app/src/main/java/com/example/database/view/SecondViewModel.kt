@@ -12,7 +12,6 @@ class SecondViewModel @Inject constructor(
 ): ViewModel() {
 
     suspend fun getUserData(): SleepNight?{
-
         return repository.getUser()
     }
 

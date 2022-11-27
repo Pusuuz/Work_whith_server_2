@@ -19,30 +19,40 @@ import kotlinx.coroutines.launch
 class FirstFragment: Fragment(R.layout.first_fragment) {
 
     private val viewModel: FirstViewModel by viewModels()
-
-
     private var _binding: FirstFragmentBinding? = null
-    // This property is only valid between onCreateView and
-// onDestroyView.
     private val binding get() = _binding!!
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+
+
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FirstFragmentBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        return binding.root
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 
+
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
         binding.Next.setOnClickListener {
 
             val job = binding.JobField.text.toString()
